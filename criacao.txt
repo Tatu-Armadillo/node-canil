@@ -1,0 +1,5 @@
+Ter instalado no pc Nodemon, ts-node e typescript (npm install -g nodemon typescript ts-node)
+Criacao do projeto -> npm init -y
+Add configuracao TS do projeto -> tsc --init
+Pacotes do peojto -> npm install express mustache-express dotenv
+Tipos para o peojto -> npm install --save-dev @types/express @types/mustache-express @types/node
