@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetDevShop - O petshop do dev</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="/image/png" href="/images/favicon.png" />
 </head>
+
 <body>
     {{>partials/header}}
-    <main>
-        <h3>main</h3>
+
+    <main class="container list">
+        {{#list}}
+        <div class="item">
+            <img class="item--image" src="images/{{image}}" />
+            <div class="item--name">{{name}}</div>
+            <div class="item--color">Cor: {{color}}</div>
+            <div class="item--genre">Gênero: {{sex}}</div>
+        </div>
+        {{/list}}
     </main>
+
+    {{^list}}
+    <div class="container no-list">
+        <h2>Sem animais disponiveis</h2>
+    </div>
+    {{/list}}
+
     {{>partials/footer}}
 </body>
+
 </html>

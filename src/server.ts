@@ -21,7 +21,7 @@ server.use(express.static(path.join(__dirname, '../public')))
 server.use(mainRoutes);
 // Sem pagina criada
 server.use((req: Request, res: Response) => {
-    res.send('Pagina não encontrada!')
+    res.render('pages/404')
 });
 
 // Conectar o servidor
