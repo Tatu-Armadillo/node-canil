@@ -3,5 +3,6 @@ Criacao do projeto -> npm init -y
 Add configuracao TS do projeto -> tsc --init
 Pacotes do peojto -> npm install express mustache-express dotenv
 Tipos para o peojto -> npm install --save-dev @types/express @types/mustache-express @types/node
+Inserção de dados -> npm install validator
 
 Sem pagina conexão com o banco de dados

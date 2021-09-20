@@ -6,6 +6,8 @@ import * as SearchController from '../controllers/search.controller';
 const router = Router();
 
 router.get('/', PageController.home);
+router.post('/novosanimais', PageController.novosAnimais)
+
 router.get('/dogs', PageController.dogs);
 router.get('/cats', PageController.cats);
 router.get('/fishes', PageController.fishes);
