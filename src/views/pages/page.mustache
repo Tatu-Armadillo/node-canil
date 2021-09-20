@@ -12,6 +12,25 @@
 <body>
     {{>partials/header}}
 
+    <div style="padding: 50px;">
+        <fieldset>
+            <legend>Prencha todos os campos Requisitados</legend>
+            <form method="POST" action="/novosanimais">
+                <input style="margin: 10px;" type="text" name="especie" placeholder="Especie">
+                <!-- <input style="margin: 10px;" type="text" name="image" placeholder="Nome da Imagem">
+                <input style="margin: 10px;" type="text" name="name" placeholder="Nome do animal">
+                <input style="margin: 10px;" type="text" name="color" placeholder="Coloração"> <br /> -->
+                <hr/>
+                <br />
+                <!-- <input type="radio" id="Masculino" name="sexo" checked="checked" >
+                <label for="Masculino">Masculino</label> <br /><br />
+                <input type="radio" id="Femenino" name="sexo">
+                <label for="Femenino">Femenino</label> <br /><br />  -->
+                <input type="submit" placeholder="Subimit" >
+            </form>
+        </fieldset>
+    </div>
+
     <main class="container list">
         {{#list}}
         <div class="item">
