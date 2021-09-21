@@ -45,3 +45,23 @@ export const fishes = (req: Request, res: Response) => {
         },
     });
 }
+
+export const novosAnimais = async (req: Request, res: Response) => {
+
+    console.log(req.body.especie == undefined);
+    
+    let { especie } = req.body
+    if (!especie) {
+        console.log('undefined.');
+        return;
+    }
+    console.log(especie);
+    // const pet = await Pets.create({
+    //     especie: especie,
+    //     image: image,
+    //     name: name,
+    //     color: color,
+    //     sexo: sexo
+    // });
+    res.redirect('/');
+}
