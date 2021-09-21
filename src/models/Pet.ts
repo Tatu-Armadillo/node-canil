@@ -16,7 +16,7 @@ export const Pet = sequelize.define<PetInstance>("Pet",
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        type: {
+        especie: {
             type: DataTypes.STRING
         },
         image: {
@@ -28,7 +28,7 @@ export const Pet = sequelize.define<PetInstance>("Pet",
         color: {
             type: DataTypes.STRING
         },
-        sex: {
+        sexo: {
             type: DataTypes.STRING,
             defaultValue: 'MASCULINO'
         }

@@ -4,10 +4,8 @@ import { createMenuObject } from "../helpers/createMenuObject";
 import { Pet } from "../models/Pet";
 
 export const home = async (req: Request, res: Response) => {
-
     console.log('Conexão estabelecida');
     let list = await Pet.findAll();
-    console.log(list);
 
     res.render('pages/page', {
         menu: createMenuObject('all'),
@@ -47,21 +45,14 @@ export const fishes = (req: Request, res: Response) => {
 }
 
 export const novosAnimais = async (req: Request, res: Response) => {
+    let { especie, image, name, color, sexo } = req.body;
 
-    console.log(req.body.especie == undefined);
-    
-    let { especie } = req.body
-    if (!especie) {
-        console.log('undefined.');
-        return;
-    }
-    console.log(especie);
-    // const pet = await Pets.create({
-    //     especie: especie,
-    //     image: image,
-    //     name: name,
-    //     color: color,
-    //     sexo: sexo
-    // });
+    const pet = await Pet.create({
+        especie: especie,
+        image: image,
+        name: name,
+        color: color,
+        sexo: sexo
+    });
     res.redirect('/');
 }

@@ -2,7 +2,6 @@ import express, { Response, Request } from 'express';
 import dotenv from 'dotenv';
 import mustache from 'mustache-express';
 import path from 'path';
-
 import mainRoutes from './routes/index';
 
 dotenv.config();
@@ -15,7 +14,7 @@ server.engine('mustache', mustache());
 
 // Pasta de arquivos estaticos
 server.use(express.static(path.join(__dirname, '../public')))
-
+server.use(express.urlencoded({extended: true})); // Configuração necessaria para encaminhar dados do mustache para o servidor
 // Rotas
 // Pagina Principal
 server.use(mainRoutes);
