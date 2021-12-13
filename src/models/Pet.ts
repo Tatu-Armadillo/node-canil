@@ -7,7 +7,7 @@ export interface PetInstance extends Model {
     image: string;
     name: string;
     color: string;
-    sex: 'Masculino' | 'Feminino';
+    sexo: 'Masculino' | 'Feminino';
 }
 
 export const Pet = sequelize.define<PetInstance>("Pet",
